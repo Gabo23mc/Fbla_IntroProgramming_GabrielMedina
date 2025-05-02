@@ -1,0 +1,85 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Fondo transparente */
+  padding: 18px 0 8px 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: none;
+}
+
+/* Estilo para el Link que envuelve el brand */
+.navbar-brand-link {
+    text-decoration: none; /* Quita el subrayado por defecto del link */
+    color: inherit; /* Hereda el color del div interno */
+    cursor: pointer; /* Indica que es clickable */
+    transition: transform 0.15s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.navbar-brand-link:hover {
+    transform: scale(1.05); /* Efecto de zoom sutil al hacer hover */
+}
+
+
+.navbar-brand {
+  color: #fff; /* Blanco */
+  font-family: 'Audiowide', Arial, sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 16px #1e90ff, 0 0 32px #00c3ff; /* Sombra de texto azul ultra diseño */
+  margin-right: 40px;
+  /* cursor: pointer; -- Movido al Link */
+}
+
+.navbar-links ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #b3e5fc; /* Color de texto azul claro */
+  font-family: 'Space Mono', Arial, sans-serif;
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  background: rgba(30,144,255,0.2); /* Fondo translúcido azul en hover/activo */
+  color: #fff; /* Texto blanco en hover/activo */
+}
+
+/* --- Added styles for the Welcome Message --- */
+.navbar-welcome {
+  color: #fff; /* Make welcome text white */
+  font-family: 'Space Mono', Arial, sans-serif; /* Use Space Mono font */
+  font-size: 1.15rem; /* Match the link font size */
+  font-weight: bold; /* Make it bold */
+  margin-left: 40px; /* Add some space from the links */
+}
+
+/* --- Added styles for the Login Link container --- */
+.navbar-login-link a {
+  color: #fff; /* Make login link white */
+  font-family: 'Space Mono', Arial, sans-serif; /* Use Space Mono font */
+  font-size: 1.15rem; /* Match the link font size */
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 40px; /* Add space */
+}
+
+.navbar-login-link a:hover {
+   background: rgba(30,144,255,0.2); /* Match hover style of other links */
+   color: #fff;
+}

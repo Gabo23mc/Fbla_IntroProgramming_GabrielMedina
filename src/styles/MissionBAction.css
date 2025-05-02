@@ -1,0 +1,67 @@
+
+/* Los estilos de título y descripción pueden usar colores específicos si quieres */
+.intro-title {
+  color: #fff; /* Blanco */
+  font-size: 2.5rem;
+  text-shadow: 0 2px 16px #1e90ff, 0 0 32px #00c3ff; /* Sombra azul */
+  margin-bottom: 12px;
+  /* Las animaciones animate-fadein y animate-slideup ya están en App.css */
+}
+
+.intro-desc {
+  color: #b3e5fc; /* Azul claro */
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Los estilos .choices y .mission-button ya están en App.css */
+
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* This creates space between the buttons */
+  width: 100%;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.mission-button {
+  width: 220px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #00e676 0%, #00c3ff 100%);
+  color: #fff;
+  font-family: 'Audiowide', 'Space Mono', Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 12px 0 rgba(0,227,118,0.25);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  letter-spacing: 1px;
+  outline: none;
+  animation: pop 0.7s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.mission-button:hover {
+  transform: scale(1.09) rotate(-1deg);
+  box-shadow: 0 4px 24px 0 #00c3ff99;
+  background: linear-gradient(90deg, #00c3ff 0%, #00e676 100%);
+  filter: brightness(1.2);
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideup {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pop {
+  0% { transform: scale(0.7);}
+  80% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}

@@ -1,0 +1,92 @@
+  .center-ui-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+    min-height: 350px;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(10, 10, 30, 0.7);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    padding: 32px 24px 24px 24px;
+    z-index: 10;
+    border: 2px solid rgba(0,255,255,0.15);
+    backdrop-filter: blur(8px);
+    animation: glassy-pop 1s cubic-bezier(.23,1.02,.64,1.01);
+  }
+  /* ... (igual que antes, puedes agregar más blur, sombra, etc.) ... */
+
+/* src/styles/Intro.css */
+
+/* Los estilos de título y descripción pueden usar colores específicos si quieres */
+.intro-title {
+  color: #fff; /* Blanco */
+  font-size: 2.5rem;
+  text-shadow: 0 2px 16px #1e90ff, 0 0 32px #00c3ff; /* Sombra azul */
+  margin-bottom: 12px;
+  /* Las animaciones animate-fadein y animate-slideup ya están en App.css */
+}
+
+.intro-desc {
+  color: #b3e5fc; /* Azul claro */
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Los estilos .choices y .mission-button ya están en App.css */
+
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.mission-button {
+  width: 220px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #1e90ff 0%, #00c3ff 100%);
+  color: #fff;
+  font-family: 'Audiowide', 'Space Mono', Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 12px 0 rgba(30,144,255,0.25);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  letter-spacing: 1px;
+  outline: none;
+  animation: pop 0.7s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.mission-button:hover {
+  transform: scale(1.09) rotate(-1deg);
+  box-shadow: 0 4px 24px 0 #00c3ff99;
+  background: linear-gradient(90deg, #00c3ff 0%, #1e90ff 100%);
+  filter: brightness(1.2);
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideup {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pop {
+  0% { transform: scale(0.7);}
+  80% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}

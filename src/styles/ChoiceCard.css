@@ -1,0 +1,25 @@
+/* ChoiceCard.css */
+
+.choice-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.choice-card:hover {
+    background-color: #e0e0e0;
+}
+
+.choice-card-title {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.choice-card-content {
+    font-size: 1em;
+    color: #333;
+}

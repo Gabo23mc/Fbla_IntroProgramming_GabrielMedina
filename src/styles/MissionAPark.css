@@ -1,0 +1,16 @@
+.missiona-park-title {
+  font-family: 'Audiowide', Arial, sans-serif;
+  color: #fff;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 16px #ffb300, 0 0 32px #ff4081;
+  margin-bottom: 12px;
+  animation: fadein 1.2s cubic-bezier(.23,1.02,.64,1.01);
+}
+.missiona-park-desc {
+  font-family: 'Space Mono', monospace;
+  color: #ffe082;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  text-align: center;
+  animation: slideup 1.2s cubic-bezier(.23,1.02,.64,1.01);
+}

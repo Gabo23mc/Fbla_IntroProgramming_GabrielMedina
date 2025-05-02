@@ -1,0 +1,115 @@
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.center-ui-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  min-height: 350px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(30, 30, 60, 0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  padding: 32px 24px 24px 24px;
+  z-index: 10;
+  border: 2px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  animation: glassy-pop 1s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.park-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Audiowide', Arial, sans-serif;
+  text-shadow: 0 2px 16px #ffb300, 0 0 32px #ff4081;
+  margin-bottom: 12px;
+  animation: fadein 1.2s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.park-desc {
+  color: #ffe082;
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 24px;
+  text-align: center;
+  animation: slideup 1.2s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.park-button {
+  width: 220px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #ffb300 0%, #ff4081 100%);
+  color: #fff;
+  font-family: 'Audiowide', 'Space Mono', Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 12px 0 rgba(255,183,77,0.25);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  letter-spacing: 1px;
+  outline: none;
+  animation: pop 0.7s cubic-bezier(.23,1.02,.64,1.01);
+}
+
+.park-button:hover {
+  transform: scale(1.09) rotate(-1deg);
+  box-shadow: 0 4px 24px 0 #ff408199;
+  background: linear-gradient(90deg, #ff4081 0%, #ffb300 100%);
+  filter: brightness(1.2);
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideup {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pop {
+  0% { transform: scale(0.7);}
+  80% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}
+@keyframes glassy-pop {
+  from { opacity: 0; transform: scale(0.95);}
+  to { opacity: 1; transform: scale(1);}
+}
+@keyframes skyFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .center-ui-container {
+    min-width: 90vw;
+    padding: 16px 4vw 16px 4vw;
+  }
+  .park-button {
+    width: 90vw;
+    font-size: 1rem;
+  }
+}

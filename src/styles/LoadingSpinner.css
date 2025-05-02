@@ -1,0 +1,44 @@
+/* src/styles/LoadingSpinner.css */
+
+.loading-overlay {
+    position: fixed; /* O 'absolute' si es relativo a un contenedor específico */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 44, 52, 0.85); /* Fondo oscuro semitransparente, similar a App.css */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+    color: white;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Evita interacciones cuando está oculto */
+  }
+  
+  .loading-spinner {
+    border: 8px solid #f3f3f3; /* Gris claro */
+    border-top: 8px solid #61dafb; /* Azul React (o el color que prefieras) */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-overlay p {
+    font-size: 1.2em;
+    color: #f3f3f3;
+  }
+  

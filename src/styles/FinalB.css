@@ -1,0 +1,19 @@
+/* src/styles/Intro.css */
+
+/* Los estilos de título y descripción pueden usar colores específicos si quieres */
+.intro-title {
+  color: #fff; /* Blanco */
+  font-size: 2.5rem;
+  text-shadow: 0 2px 16px #1e90ff, 0 0 32px #00c3ff; /* Sombra azul */
+  margin-bottom: 12px;
+  /* Las animaciones animate-fadein y animate-slideup ya están en App.css */
+}
+
+.intro-desc {
+  color: #b3e5fc; /* Azul claro */
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Los estilos .choices y .mission-button ya están en App.css */

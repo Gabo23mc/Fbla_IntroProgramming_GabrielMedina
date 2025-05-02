@@ -1,0 +1,61 @@
+.park-navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 18px 0 8px 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: none;
+}
+
+.park-navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.park-navbar li a {
+  color: #fff;
+  font-family: 'Audiowide', Arial, sans-serif;
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.park-navbar li a.active,
+.park-navbar li a:hover {
+  background: #ffb30033;
+  color: #ff4081;
+}
+
+/* --- Added styles for the Welcome Message --- */
+.park-navbar-welcome {
+  color: #fff; /* Make welcome text white */
+  font-family: 'Audiowide', Arial, sans-serif; /* Use Audiowide font */
+  font-size: 1.15rem; /* Match the link font size */
+  font-weight: bold; /* Make it bold */
+  margin-left: 40px; /* Add space from the links */
+}
+
+/* --- Added styles for the Login Link container --- */
+.park-navbar-login-link a {
+  color: #fff; /* Make login link white */
+  font-family: 'Audiowide', Arial, sans-serif; /* Use Audiowide font */
+  font-size: 1.15rem; /* Match the link font size */
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 40px; /* Add space */
+}
+
+.park-navbar-login-link a:hover {
+   background: #ffb30033; /* Match hover style of other links */
+   color: #ff4081;
+}
