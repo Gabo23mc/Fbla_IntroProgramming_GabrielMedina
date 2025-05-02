@@ -1,0 +1,561 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: url('https://source.unsplash.com/1920x1080/?landscape') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust opacity for better visibility */
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+    position: relative;
+    padding-bottom: 200px; /* Increased padding to ensure footer visibility */
+    padding-top: 80px; /* Adjust padding to ensure title is visible */
+}
+
+/* Titles */
+.title {
+    font-size: 4rem;
+    margin-top: 100px; /* Increased margin to ensure visibility */
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: rgb(204, 225, 49); /* Change color to red for visibility testing */
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Centering Styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Boxes */
+.menu-items, .interactive-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.menu-item, .box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7); /* Darker shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover, .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Darker shadow on hover */
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-primary { background-color: #3498db; }
+.btn-success { background-color: #2ecc71; }
+.btn-warning { background-color: #f39c12; }
+
+.btn-primary:hover, .btn-success:hover, .btn-warning:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, rgba(0, 128, 128, 0.9), rgba(0, 64, 128, 0.9));
+    color: white;
+    padding: 5px 0; /* Decrease padding to reduce height */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header is above other elements */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header .login-menu {
+    position: relative;
+}
+
+header .login-menu .login-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header .login-menu .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+header .login-menu .dropdown a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+header .login-menu .dropdown a:hover {
+    background-color: rgba(0, 128, 128, 0.1);
+}
+
+header .login-menu:hover .dropdown {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 128, 128, 0.95);
+    color: white;
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Ensure footer text is white for visibility */
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+footer .footer-info {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+footer .footer-info h2 a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+footer .footer-info h2 a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffdd57;
+}
+
+footer .fbla-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+footer .fbla-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .menu-item {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* New Styles for How to Play and How to Login */
+.how-to-play, .how-to-login {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for more space */
+    margin: 30px 0; /* Increased margin for more space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    color: #000; /* Ensure text is visible */
+    text-align: center; /* Center text */
+    font-size: 1.2rem; /* Increased font size for better visibility */
+}
+
+.how-to-play h2, .how-to-login h2 {
+    color: #000; /* Ensure titles are visible */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.how-to-play:hover, .how-to-login:hover {
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for more space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center form content */
+    margin: 30px 0; /* Increased margin for more space */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.form-group label,
+.form-group h2,
+.form-group p {
+    color: #000; /* Asegura que el texto sea oscuro y legible */
+    margin-bottom: 20px; /* Agrega un margen inferior para separación */
+}
+
+/* Help Title Styles */
+.help-title {
+    font-size: 4rem; /* Tamaño grande */
+    color: #eaeae8; /* Color amarillo brillante */
+    text-align: center; /* Centrar el texto */
+    text-transform: uppercase; /* Mayúsculas */
+    margin: 40px 0; /* Espaciado alrededor del título */
+    text-shadow: 3px 3px 8px rgba(39, 40, 11, 0.8); /* Sombra */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-family: 'Arial', sans-serif; /* Fuente limpia */
+    font-weight: bold; /* Hacerlo más grueso */
+}
+
+/* Estilos adicionales para asegurar que el contenido se vea adecuadamente */
+
+.header-footer-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .header-footer-star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    from { opacity: 0.5; }
+    to   { opacity: 1; }
+  }
+  
+  header, footer {
+    position: relative;
+    background: #0a1026;
+    overflow: hidden;
+  }
+  
+ .fbla-logo-sphere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #fffbe6 60%, #ffd700 100%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 0 auto;
+  border: 3px solid #fffbe6;
+}
+
+.fbla-logo-sphere img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+  .main-header {
+  width: 100vw;
+  background: rgba(10, 10, 30, 0.85);
+  min-height: 90px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row; /* ¡Asegura que sea horizontal! */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.header-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #fffbe6 60%, #ffd700 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: 3px solid #fffbe6;
+  object-fit: cover;
+}
+
+.navbar {
+  margin-left: auto; /* Empuja el navbar a la derecha */
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: #fff;
+  font-family: 'Audiowide', Arial, sans-serif;
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar li a:hover {
+  background: #00c3ff33;
+  color: #ffd700;
+}
+.auth-container {
+  max-width: 350px;
+  margin: 60px auto;
+  padding: 2em 2em 1em 2em;
+  background: #6dc465;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  font-family: 'Space Mono', monospace;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.auth-input {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    border: 1px solid #69d362;
+    border-radius: 6px;
+    font-size: 1em;
+    /* --- Agrega estas líneas --- */
+    color: #333; /* Color del texto oscuro */
+    background-color: #6cc262; /* Fondo blanco para el input */
+    /* -------------------------- */
+  }
+  
+  /* Opcional: Estilo para el placeholder si necesitas cambiarlo específicamente */
+  .auth-input::placeholder {
+    color: #474242; /* Un gris un poco más claro para el placeholder */
+  }
+  
+.auth-button {
+  background: #2b6cb0;
+  color: #68e4b5;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  transition: background 0.2s;
+}
+.auth-button:hover {
+  background: #205080;
+}
+.auth-link {
+  margin-top: 1em;
+  text-align: center;
+}
+.auth-link a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+.auth-link a:hover {
+  text-decoration: underline;
+}
+.auth-error {
+  color: #c53030;
+  background: #8fda66;
+  border: 1px solid #feb2b2;
+  border-radius: 6px;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.auth-success {
+  color: #276749;
+  background: #4ba964;
+  border: 1px solid #9ae6b4;
+  border-radius: 6px;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.profile-info {
+  margin-bottom: 1em;
+  text-align: center;
+}

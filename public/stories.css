@@ -1,0 +1,130 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    background-color: #1e272e; /* Fondo oscuro para temática urbana */
+  }
+  
+  /* Interactive Background */
+  .interactive-background {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: relative;
+    padding: 30px;
+    background-color: rgba(30, 39, 46, 0.8); /* Fondo translúcido con tono urbano */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Sombra más prominente */
+    max-width: 650px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #d2dae2; /* Color gris claro */
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Button Styling */
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #0abde3; /* Azul vibrante */
+  }
+  
+  .btn-success {
+    background-color: #1dd1a1; /* Verde neón */
+  }
+  
+  .btn-danger {
+    background-color: #ee5253; /* Rojo neón */
+  }
+  
+  .btn-secondary {
+    background-color: #576574; /* Gris oscuro */
+  }
+  
+  .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: #2ecc71; /* Cambio a verde al hacer hover */
+  }
+  
+  .go-back {
+    margin-top: 20px;
+  }
+  
+  /* Choices Container */
+  .choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaciado entre botones */
+  }
+  
+  /* Story Progress Styling */
+  .story-progress {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #d2dae2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra en el texto */
+  }
+  
+  /* Story Choices Button Hover Effect */
+  .choices .btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Highlight Text */
+  .story-progress p {
+    color: #ffeaa7; /* Amarillo pálido para destacar el texto */
+  }
+  
+  /* Animaciones específicas para temática urbana */
+  .overlay {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

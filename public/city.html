@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Carga dinámica del header -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header-container">
+    <!-- Contenido del header se carga dinámicamente -->
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="interactive-background">
+    <div class="overlay animate__animated animate__fadeIn">
+      <h2 class="title">Lost in the City</h2>
+      <div id="storyProgress" class="story-progress">
+        <p>You find yourself in the middle of a bustling city. Two choices lie ahead. Where will you go?</p>
+        <div class="choices" id="choices-container">
+          <button id="exploreDowntown" class="btn btn-primary">Explore Downtown</button>
+          <button id="visitAlley" class="btn btn-success">Visit the Alley</button>
+        </div>
+      </div>
+    </div>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="videos/cityvideo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container">
+    <!-- Contenido del footer se carga dinámicamente -->
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+  </script>
+
+  <!-- Script principal para manejar la lógica del juego -->
+  <script defer src="city.js"></script>
+</body>
+
+</html>

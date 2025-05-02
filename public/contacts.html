@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="videos/contactsvideo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Main Title -->
+  <h1 class="help-title">Help:</h1>
+
+  <!-- Include Header -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.body.insertAdjacentHTML('afterbegin', data))
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <!-- How to Play Section -->
+      <section class="how-to-play">
+        <h2>To play the interactive games, follow these steps:</h2>
+        <ul>
+          <li>Choose a game from the menu.</li>
+          <li>Follow the on-screen instructions to navigate through the game.</li>
+          <li>Enjoy and have fun!</li>
+        </ul>
+      </section>
+
+      <!-- How to Login Section -->
+      <section class="how-to-login">
+        <h2>More tips for playing the games:</h2>
+        <ul>
+          <li>Turn on your sound, so you can hear music.</li>
+          <li>Wait some minutes, so you can enjoy some animations.</li>
+          <li>Try different games to see which one you like the most.</li>
+        </ul>
+      </section>
+
+      <section class="how-to-login">
+        <h2>Tips for a good experience:</h2>
+        <ul>
+          <li>Use a modern and updated browser like Chrome, Firefox, or Edge for the best experience.</li>
+          <li>Close other heavy apps or browser tabs to improve performance and reduce lag.</li>
+          <li>Make sure your internet connection is stable.</li>
+        </ul>
+      </section>
+
+
+     
+
+  <!-- Include Footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.body.insertAdjacentHTML('beforeend', data))
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+</body>
+</html>

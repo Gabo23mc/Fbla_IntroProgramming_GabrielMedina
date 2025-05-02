@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Carga dinámica del header -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header-container">
+    <!-- Contenido del header se carga dinámicamente -->
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="interactive-background">
+    <div class="overlay animate__animated animate__fadeIn">
+      <h1 class="title animate__animated animate__fadeInDown">Resources</h1>
+      <div class="interactive-boxes">
+        <div class="box animate__animated animate__zoomIn">
+          <h2>Libraries Used</h2>
+          <ul>
+            <li><a href="https://animate.style/">Animate.css</a> - For animations.</li>
+            <li><a href="https://fontawesome.com/">Font Awesome</a> - For icons.</li>
+            <li><a href="https://getbootstrap.com/">Bootstrap</a> - For layout and design.</li>
+          </ul>
+        </div>
+        <div class="box animate__animated animate__zoomIn">
+          <h2>Multimedia Credits</h2>
+          <ul>
+            <li><a href="https://pixabay.com/">Pixabay</a> - For videos and additional images.</li>
+            <li><a href="https://www.canva.com/">Canva</a> - For create the logo, designs and presentation.</li>
+
+          </ul>
+        </div>
+        <div class="box animate__animated animate__zoomIn">
+          <h2>Additional Resources</h2>
+          <ul>
+            <li><a href="https://fonts.google.com/">Google Fonts</a> - For typography.</li>
+            <li>Custom code and design by the owner of the website.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="videos/resourcesvideo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container">
+    <!-- Contenido del footer se carga dinámicamente -->
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+  </script>
+</body>
+
+</html>
